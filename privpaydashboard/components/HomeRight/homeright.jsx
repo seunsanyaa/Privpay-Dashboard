@@ -18,10 +18,7 @@ export default function HomeRight() {
 
 <div className={homeRight.rightGrid}>
     <div className={homeRight.grey}>
-
-
-
-
+        
     </div>
 
     <div className={homeRight.lightGrey}>
