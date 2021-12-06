@@ -1,0 +1,65 @@
+
+.NavBarContent{
+
+  padding-top: 2em;
+}
+
+.NavBarContent > :not(.divider) {
+padding-left: 2em;
+
+
+}
+
+.divider{
+
+  padding-top: 2em;
+
+}
+.menu{
+
+  padding-top: 3em;
+}
+
+.menuLinks{
+
+  padding-top: 1.5em;
+}
+
+
+.menuLinks div:not(:first-child){
+padding-top: 1.5em;
+
+}
+
+.othersLink div:not(:first-child){
+  padding-top: 1.5em;
+
+}
+.IconandText{
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+.menuLinkContent{
+padding-left: 1em;
+  font-size: 1.1em;
+}
+
+
+
+.nav{
+  background: rgba(196, 196, 196, 0.12);
+  min-height: 100vh;
+}
+
+.others{
+padding-top: 2em;
+
+}
+.othersLink{
+
+  padding-top: 1.2em;
+}
