@@ -1,7 +1,10 @@
-
+@font-face {
+  font-family: 'Okta';
+  src: url('https://res.cloudinary.com/seunsanyaa/raw/upload/v1638778653/OktaNeue-SemiBold_pttfou.ttf') ;
+}
 .NavBarContent{
-
-  padding-top: 2em;
+font-family: Okta;
+  padding-top: 1.8em;
 }
 
 .NavBarContent > :not(.divider) {
@@ -13,26 +16,27 @@ padding-left: 2em;
 .divider{
 
   padding-top: 2em;
+  width: 15em;
 
 }
 .menu{
 
-  padding-top: 3em;
+  padding-top: 2em;
 }
 
 .menuLinks{
 
-  padding-top: 1.5em;
+  padding-top: 0em;
 }
 
 
 .menuLinks div:not(:first-child){
-padding-top: 1.5em;
+padding-top: 1.3em;
 
 }
 
 .othersLink div:not(:first-child){
-  padding-top: 1.5em;
+  padding-top: 1.3em;
 
 }
 .IconandText{
@@ -45,7 +49,8 @@ padding-top: 1.5em;
 
 .menuLinkContent{
 padding-left: 1em;
-  font-size: 1.1em;
+  font-size:0.9em;
+  color: #303030;
 }
 
 
@@ -56,10 +61,15 @@ padding-left: 1em;
 }
 
 .others{
-padding-top: 2em;
+padding-top: 0.5em;
 
 }
 .othersLink{
 
-  padding-top: 1.2em;
+  padding-top: 0em;
+}
+
+.h4{
+color: grey;
+
 }
