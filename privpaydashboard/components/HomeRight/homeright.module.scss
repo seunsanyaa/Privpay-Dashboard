@@ -1,12 +1,19 @@
+@font-face {
+  font-family: 'Okta Thin';
+  src: url('https://res.cloudinary.com/seunsanyaa/raw/upload/v1638778653/OktaNeue-SemiBold_pttfou.ttf') ;
+}
+
+
+
 .rightGrid{
   display: grid;
   grid-template-rows:8% 92%;
   opacity:0.8;
   background-color:#ccc;
-  position:fixed;
-  width:100%;
-  height:100%;
 
+
+
+  min-height: 100vh;
   z-index:1000;
 
 }
@@ -14,11 +21,54 @@
 
 .grey{
 
-background-size: cover;
+
   background: whitesmoke
 }
 
 .lightGrey{
 
   background: #E5E5E5;
+}
+
+.userProfile{
+
+  display:flex;
+
+  align-items: center;
+  justify-content: right;
+ margin-right: 4em;
+  padding-top: 0.7em;
+
+}
+
+.userProfileIcon{
+
+  display: block;
+
+
+
+
+
+}
+.userProfileIconImage{
+  border-radius: 50%;
+}
+
+.userProfileName{
+  font-family: Okta;
+padding-left: 0.8em;
+
+}
+
+.fullName{
+color: black;
+  margin: unset;
+font-size: 0.9em;
+
+}
+
+.email{
+  margin: unset;
+  font-size: 0.6em;
+  font-family: Okta Thin;
 }

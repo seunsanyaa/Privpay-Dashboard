@@ -1,3 +1,5 @@
+
+
 .container {
   padding: 0 2rem;
 }
@@ -67,13 +69,13 @@
 
 .grid {
   display: grid;
-  grid-template-columns:0fr 4fr ;
+  grid-template-columns:0.5fr 4fr ;
 
 
   /*align-items: center;*/
   /*justify-content: center;*/
   /*flex-wrap: wrap;*/
-  width: 100px;
+
 }
 
 .card {
