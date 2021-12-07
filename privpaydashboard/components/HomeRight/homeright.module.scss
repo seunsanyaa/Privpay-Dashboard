@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Okta Thin';
-  src: url('https://res.cloudinary.com/seunsanyaa/raw/upload/v1638778653/OktaNeue-SemiBold_pttfou.ttf') ;
+  src: url('https://res.cloudinary.com/seunsanyaa/raw/upload/v1638778212/Groteskly_Yours_-_Okta_Neue_UltraLight_hlnfue.otf') ;
 }
 
 
@@ -28,6 +28,8 @@
 .lightGrey{
 
   background: #E5E5E5;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .userProfile{
@@ -37,7 +39,7 @@
   align-items: center;
   justify-content: right;
  margin-right: 4em;
-  padding-top: 1em;
+  padding-top: 0.5em;
 
 }
 
@@ -70,5 +72,5 @@ font-size: 0.9em;
 .email{
   margin: unset;
   font-size: 0.6em;
-  font-family: Okta Thin;
+  font-family: "Okta Regular";
 }

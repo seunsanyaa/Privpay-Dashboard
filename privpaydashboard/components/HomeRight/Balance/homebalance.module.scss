@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Okta Regular';
+  src: url('https://res.cloudinary.com/seunsanyaa/raw/upload/v1638851030/OktaNeue-Regular_ns5e9s.ttf') ;
+}
+
+
+
+.container{
+  background: #FFFFFF;
+  margin-top: 1.8em;
+}
+
+
+
+.containerElement{
+
+  display: flex;
+}
+.IconandText{
+
+  display:flex;
+
+  align-items: start;
+  //justify-content: right;
+padding-top: 1.5em;
+  padding-bottom: 2.5em;
+  //padding-top: 1em;
+padding-left: 2.2em;
+}
+
+.welcomeIcon{
+ padding-top:0.3em;
+}
+.welcomeDetails{
+
+  padding-left: 1em;
+}
+.welcomeBack{
+  margin: unset;
+  font-family: Okta;
+  font-size: 1.4em;
+
+}
+.name{
+  font-family: 'Okta Thin';
+color: #303030;
+}
+.date{
+  margin: unset;
+  padding-top: 1em;
+  font-family: "Okta Regular";
+  color: #303030;
+}
+
+.myBalance{
+  margin: unset;
+  padding-top: 1em;
+  font-family: "Okta Regular";
+  color: #303030;
+  display: flex;
+  align-items:center;
+}
+
+.usdBalance{
+  font-family: Okta;
+
+}
+.cryptoBalance{
+  font-family: Okta;
+
+}
+.eyeDiv{
+
+  align-items: center;
+  padding-top: 0.1em;
+}
+
+.comingSoon{
+  background: rgba(41, 45, 50, 0.42);
+//border-bottom-left-radius: 1em;
+//  border-top-left-radius: 1em;
+  border-radius: 1em;
+padding-left: 0.5em;
+  padding-right:0.5em;
+
+padding-bottom: 0.3em;
+font-size: 0.6em;
+
+}
+.divider{
+  padding-top: 1em;
+height: 8em;
+  padding-left: 3.8em;
+}

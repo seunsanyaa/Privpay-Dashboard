@@ -3,7 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../../styles/Home.module.css'
 import homeRight from './homeright.module.scss'
+
 import {logo,dashboardicon} from './icon'
+import HomeBalance from "./Balance/homebalance";
+
+import WatchList from "./WatchList/watchlist";
+
+
 export default function HomeRight() {
     return (
 
@@ -45,6 +51,10 @@ export default function HomeRight() {
 
 
 
+<HomeBalance/>
+
+
+<WatchList/>
 
     </div>
 
