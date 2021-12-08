@@ -26,6 +26,8 @@ export default function HomeRight() {
 
 <div className={homeRight.rightGrid}>
     <div className={homeRight.grey}>
+
+
 <div className={homeRight.userProfile}>
 
 <div className={homeRight.userProfileIcon}>
@@ -49,6 +51,9 @@ export default function HomeRight() {
 
     </div>
 
+
+
+
     <div className={homeRight.lightGrey}>
 
 
@@ -65,9 +70,11 @@ export default function HomeRight() {
 
 
 <LatestActivities/>
-</div>
-    </div>
 
+</div>
+
+
+    </div>
 
 
 </div>
