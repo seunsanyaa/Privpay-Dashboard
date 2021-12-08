@@ -10,7 +10,7 @@ import HomeBalance from "./Balance/homebalance";
 import WatchList from "./WatchList/watchlist";
 import BuyAndSellWidget from "./BuyAndSellWidget/buyandsellwidget";
 import LatestActivities from "./LatestActivities/latestactivities";
-
+import TopBar from "../TopBar/topbar";
 
 export default function HomeRight() {
     return (

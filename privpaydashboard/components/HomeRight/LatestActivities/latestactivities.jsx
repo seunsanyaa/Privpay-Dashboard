@@ -30,7 +30,7 @@ export default function LatestActivities() {
 
     <div className={latestactivities.notransaction}>
     <p className={latestactivities.notransactionParagraph}> You have not made any
-        transaction yet</p>
+        transaction yet.</p>
 
 
     </div>
