@@ -8,6 +8,8 @@ import {logo,dashboardicon} from './icon'
 import HomeBalance from "./Balance/homebalance";
 
 import WatchList from "./WatchList/watchlist";
+import BuyAndSellWidget from "./BuyAndSellWidget/buyandsellwidget";
+import LatestActivities from "./LatestActivities/latestactivities";
 
 
 export default function HomeRight() {
@@ -56,6 +58,14 @@ export default function HomeRight() {
 
 <WatchList/>
 
+
+<div className={homeRight.lastGrid}>
+
+<BuyAndSellWidget/>
+
+
+<LatestActivities/>
+</div>
     </div>
 
 

@@ -7,29 +7,30 @@
 
 .rightGrid{
   display: grid;
-  grid-template-rows:8% 92%;
+  grid-template-rows:5% 95%;
   opacity:0.8;
-  background-color:#ccc;
-
+  background:snow;
 
 
   min-height: 100vh;
-  z-index:1000;
+  z-index:1;
 
 }
 
 
 .grey{
 
-
-  background: whitesmoke
+position: sticky;
+  width: 100%;
+  background: white;
 }
 
 .lightGrey{
 
-  background: #E5E5E5;
+  background: ghostwhite;
   padding-left: 3em;
   padding-right: 3em;
+  height: 200%;
 }
 
 .userProfile{
@@ -73,4 +74,11 @@ font-size: 0.9em;
   margin: unset;
   font-size: 0.6em;
   font-family: "Okta Regular";
+}
+
+.lastGrid{
+
+  margin-top: 3.5em;
+  display: grid;
+  grid-template-columns: 2.5fr 4fr;
 }

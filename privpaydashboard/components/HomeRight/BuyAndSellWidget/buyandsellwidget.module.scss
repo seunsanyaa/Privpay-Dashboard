@@ -1,0 +1,87 @@
+
+.container{
+
+}
+
+.buyAndSellHeaders{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+text-align: center;
+
+}
+
+
+.buyAndSellHeader{
+  font-family: "Okta";
+}
+
+.buyAndSellHeaderLeft{
+
+  background: #FFFFFF;
+}
+
+.buyAndSellHeaderRight{
+  background:rgba(196, 196, 196, 0.26);
+}
+
+.buyAndSellHeader{
+
+
+
+margin: 0.4em;
+}
+
+.formContainer{
+text-align: center;
+  background: white;
+
+}
+
+
+.coinName{
+
+  width: 92%;
+  height: 3em;
+  border: 0.611765px solid #C4C4C4;
+  border-radius: 6.11765px;
+  font-size: 1.2em;
+
+}
+
+.formContainer{
+
+  padding-top: 1.5em;
+  padding-bottom: 3em;
+}
+
+.coinAmount{
+  width: 92%;
+  height: 3em;
+  border: 0.611765px solid #C4C4C4;
+  border-radius: 6.11765px;
+ margin-top: 1.5em;
+  font-family: "Okta Regular";
+  font-size: 1.2em;
+  padding-left: 1em;
+}
+
+.buySubmit{
+  width: 93%;
+  height: 3em;
+  border: 0.611765px solid #C4C4C4;
+  border-radius: 6.11765px;
+  margin-top: 1.5em;
+  font-family: "Okta Regular";
+  font-size: 1.2em;
+  padding-left: 1em;
+  background: #D4B418;
+  color: white;
+
+}
+
+.coinNameOption{
+padding-left: 2em;
+  font-family: "Okta";
+
+}
+
