@@ -77,19 +77,27 @@ color: #303030;
 }
 
 .comingSoon{
-  background: rgba(41, 45, 50, 0.42);
+  background: rgba(196, 196, 196, 0.2);
 //border-bottom-left-radius: 1em;
 //  border-top-left-radius: 1em;
   border-radius: 1em;
 padding-left: 0.5em;
   padding-right:0.5em;
-
-padding-bottom: 0.3em;
+padding-top: 0.3em;
+  padding-bottom: 0.3em;
+margin-left: 1em;
 font-size: 0.6em;
+  font-family: "Okta";
 
 }
 .divider{
   padding-top: 1em;
 height: 8em;
   padding-left: 3.8em;
+}
+
+.balanceandComingsoon{
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
