@@ -11,16 +11,19 @@ text-align: center;
 }
 
 
+
 .buyAndSellHeader{
+
   font-family: "Okta";
 }
 
 .buyAndSellHeaderLeft{
-
+  border-top-left-radius: 6px;
   background: #FFFFFF;
 }
 
 .buyAndSellHeaderRight{
+  border-top-right-radius: 6px;
   background:rgba(196, 196, 196, 0.26);
 }
 
@@ -49,7 +52,8 @@ text-align: center;
 }
 
 .formContainer{
-
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
   padding-top: 1.5em;
   padding-bottom: 3em;
 }
