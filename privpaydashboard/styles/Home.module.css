@@ -71,7 +71,7 @@
   /*display: grid;*/
   grid-template-columns:0.8fr 4fr ;
 
-
+max-width: 1440px;
   /*align-items: center;*/
   /*justify-content: center;*/
   /*flex-wrap: wrap;*/
