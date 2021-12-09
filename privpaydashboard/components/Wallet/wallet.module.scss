@@ -34,3 +34,38 @@
   //padding-top: 1em;
   padding-left: 3em;
 }
+
+.buttonsCointainer{
+
+  display: flex;
+//vertical-align: center;
+  align-items: center;
+
+}
+
+.buttonDiv{
+  //reduce margin for smaller screens
+  margin-left: 7.5em;
+
+}
+.button{
+
+  font-family: "Okta Regular";
+  display: flex;
+  align-items: center;
+background: none;
+  border: 0.817834px solid #D4B418;
+  border-radius: 4.90701px;
+
+  //padding: 0.5em;
+padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 0.8em;
+
+  padding-left: 0.5em;
+}
+
+.span{
+  padding-left: 0.5em;
+
+}
