@@ -1,0 +1,29 @@
+.container{
+
+  font-family: "Okta Regular";
+  margin-top: 2.5em;
+}
+
+
+.header{
+
+
+  font-family: "Okta Regular";
+  padding-left: 1.5em;
+
+}
+.grid{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.containerElement{
+margin-left: 4em;
+}
+
+.leftForm>*{
+
+  display: block;
+  width: 100%;
+}
