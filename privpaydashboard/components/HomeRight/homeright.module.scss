@@ -3,7 +3,10 @@
   src: url('https://res.cloudinary.com/seunsanyaa/raw/upload/v1638778212/Groteskly_Yours_-_Okta_Neue_UltraLight_hlnfue.otf') ;
 }
 
+.page{
 
+  max-width: 1440px;
+}
 
 .rightGrid{
   display: grid;
@@ -11,7 +14,7 @@
   opacity:0.8;
   background:ghostwhite;
 margin-left: 15em;
-
+max-width: 1440px;
   min-height: 100vh;
   z-index:1;
 
@@ -23,12 +26,13 @@ margin-left: 15em;
 .grey{
 overflow: unset;
 
-  width: calc(1440px - 4%);
+  width: 100%;
 position: fixed;
   background: white;
-  padding-right: 15em;
+  padding-right: 18em;
   padding-bottom: 0.5em;
   z-index: 1;
+  max-width: 1440px;
 }
 
 .lightGrey{
