@@ -1,3 +1,6 @@
+
+
+
 .container{
 
   font-family: "Okta Regular";
@@ -16,14 +19,79 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+padding-top: 3em;
+  padding-bottom: 3em;
+  text-align: center;
+  border-bottom:  0.8px solid #C4C4C4;
+  left: 40%;
+
 }
 
 .containerElement{
-margin-left: 4em;
+//margin-left: 4em;
+ padding-bottom: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .leftForm>*{
+  //
+  //display: block;
+  //width: 100%;
 
-  display: block;
+  margin: unset;
+}
+.selectPadding{
+  padding-left: 10em;
+  padding-right: 10em;
+
+
+}
+.MuiSelect-select{
+  outline: none;
+}
+.select{
+border-color: #3CC13B;
+  font-family: "Okta Regular";
+  display: flex;
+width: 100%;
+text-align: center;
+}
+.coin{
+font-family: "Okta Regular";
+  display: flex;
+  align-items: center;
+}
+
+.input{
+  margin-top: 0.8em;
+text-align: center;
   width: 100%;
+  border: unset;
+  font-size: 2em;
+  font-family: "Okta Thin";
+  color: black;
+  outline: none;
+}
+
+.usdButton{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: unset;
+  font-family: "Okta Regular";
+  font-size: 1em;
+  background: none;
+  border: 0.8px solid #C4C4C4;
+  border-radius: 4px;
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
+width: 100%;
+
+}
+
+.dollar{
+  margin-left: 0.5em;
+
 }
