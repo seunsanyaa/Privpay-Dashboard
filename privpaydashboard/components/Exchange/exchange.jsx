@@ -73,11 +73,11 @@ export default function ExchangeContainer() {
 
                         <div className={exchange.container}>
                             <div className={exchange.exchangeContainer}>
-                                <h3 className={exchange.header}>Wallet</h3>
+                                <h3 className={exchange.header}>Exchange</h3>
 
 
                                 <div className={homeBalance.container}>
-
+<div className={exchange.padding}>
                                     <div className={exchange.containerElement}>
 
 
@@ -93,7 +93,7 @@ export default function ExchangeContainer() {
             <div className={exchange.selectPadding}>
             <Box sx={{ minWidth: 120 }}>
                 <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Coin</InputLabel>
+                    <InputLabel id="demo-simple-select-label" className={exchange.inputLabel}>Coin</InputLabel>
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
@@ -126,7 +126,17 @@ export default function ExchangeContainer() {
 
 
     </div>
+<div className={exchange.switch}>
 
+
+    <img  src="data:image/svg+xml,%3Csvg width='2' height='101' viewBox='0 0 2 101' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1V100' stroke='%23C4C4C4' stroke-width='0.8' stroke-linecap='square'/%3E%3C/svg%3E%0A"/>
+    <button className={exchange.swap} > <img width={55} src="data:image/svg+xml,%3Csvg width='57' height='57' viewBox='0 0 57 57' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.4' d='M4.89437 38.2212L4.78686 18.6075C4.73998 10.0543 9.79714 4.94142 18.3269 4.89467L37.9406 4.78716C46.4703 4.74041 51.5832 9.79757 51.6299 18.3273L51.7376 37.9644C51.8078 46.494 46.7506 51.6069 38.2209 51.6537L18.5838 51.7613C10.054 51.8081 4.94112 46.7509 4.89437 38.2212Z' fill='%23D4B418'/%3E%3Cpath d='M14.8236 32.4713C14.829 33.4555 15.63 34.2244 16.5907 34.2191L35.7826 34.1139L31.8907 38.0488C31.2149 38.7321 31.221 39.8568 31.9043 40.5327C32.5876 41.2085 33.7124 41.2024 34.3883 40.5191L41.2632 33.5684C41.4263 33.4034 41.5425 33.2153 41.635 33.0039C41.7276 32.7925 41.7732 32.5579 41.7719 32.3236C41.7706 32.0892 41.7226 31.8786 41.6276 31.6448C41.4378 31.224 41.1078 30.8743 40.6616 30.6893C40.4502 30.5967 40.2156 30.5511 39.9812 30.5524L16.5713 30.6807C15.6107 30.7094 14.8183 31.5105 14.8236 32.4713Z' fill='%23292D32'/%3E%3Cpath d='M22.1611 16.0275L15.2862 22.9782C15.1231 23.1431 15.0069 23.3312 14.9144 23.5426C14.7292 23.9655 14.7319 24.4576 14.9217 24.8783C15.1115 25.2991 15.4414 25.6488 15.8877 25.8338C16.0991 25.9264 16.3103 25.9721 16.5446 25.9708L39.9779 25.8424C40.9387 25.8371 41.7311 25.036 41.7258 24.0753C41.7205 23.1145 40.9194 22.3221 39.9587 22.3274L20.7668 22.4326L24.6587 18.4978C25.0083 18.1443 25.1699 17.6982 25.1674 17.253C25.165 16.8078 24.9985 16.3634 24.6451 16.0138C23.9618 15.338 22.837 15.3442 22.1611 16.0275Z' fill='%23292D32'/%3E%3C/svg%3E%0A"/>
+     </button>
+
+    <img className={exchange.line} src="data:image/svg+xml,%3Csvg width='2' height='101' viewBox='0 0 2 101' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1V100' stroke='%23C4C4C4' stroke-width='0.8' stroke-linecap='square'/%3E%3C/svg%3E%0A" />
+
+
+</div>
 
     <div className={exchange.right}>
         <h4>To</h4>
@@ -165,6 +175,14 @@ export default function ExchangeContainer() {
 </div>
 
 
+                                        <div className={exchange.paySection}>
+                                            <button className={exchange.button} > <img src="data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.4' d='M7.1099 5.96028L16.1299 2.95028C20.1799 1.60028 22.3799 3.81028 21.0399 7.86028L18.0299 16.8803C16.0099 22.9503 12.6899 22.9503 10.6699 16.8803L9.7799 14.2003L7.0999 13.3103C1.0399 11.3003 1.0399 7.99028 7.1099 5.96028Z' fill='%23D4B418'/%3E%3Cpath d='M12.1201 11.6296L15.9301 7.80957L12.1201 11.6296Z' fill='%23D4B418'/%3E%3Cpath d='M12.1201 12.38C11.9301 12.38 11.7401 12.31 11.5901 12.16C11.3001 11.87 11.3001 11.39 11.5901 11.1L15.3901 7.28C15.6801 6.99 16.1601 6.99 16.4501 7.28C16.7401 7.57 16.7401 8.05 16.4501 8.34L12.6501 12.16C12.5001 12.3 12.3101 12.38 12.1201 12.38Z' fill='%23303030'/%3E%3C/svg%3E%0A"/>
+                                                <span className={exchange.span}>Pay</span></button>
+
+
+                                        </div>
+
+
 
 
 
@@ -172,7 +190,7 @@ export default function ExchangeContainer() {
 
 
                                     </div>
-
+</div>
                                 </div>
 
 
