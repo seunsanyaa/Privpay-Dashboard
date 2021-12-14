@@ -1,0 +1,113 @@
+.container
+{
+  font-family: "Okta Regular";
+
+}
+
+.header{
+
+  margin-top: 2.5em;
+}
+.grid{
+  padding-left: 4em;
+  padding-right: 4em;
+}
+.breadcrum{
+
+  display: flex;
+
+}
+
+.personalInfo{
+font-family: "Okta";
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom:2px solid #D4B418;
+font-size: 1em;
+}
+
+.security{
+font-family: "Okta Regular";
+  margin-left: 4em;
+  background: none;
+border: none;
+  font-size: 1em;
+}
+
+.breadcrum{
+  padding-top: 0.5em;
+  font-family: "Okta Regular";
+  border-bottom: 1px solid rgba(196, 196, 196, 0.54);
+}
+.secondSection{
+
+  padding-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.photoAndName{
+  display: block;
+  align-items: center;
+}
+
+.profileImage{
+
+  border-radius: 50%;
+}
+
+.profileForm{
+  padding-left: 3em;
+  padding-right: 10em;
+}
+
+.profileFormElements>*{
+  display: block;
+}
+
+.firstName{
+  border: 0.1px solid #303030;
+  width: 100%;
+  height: 2em;
+  border-radius: 2px;
+  font-family: "Okta Regular";
+  background: unset;
+  font-size: 1em;
+  padding-left: 1em;
+  margin-top: 0.5em;
+}
+.lastName{
+  border: 0.1px solid #303030;
+  width: 100%;
+  border-radius: 2px;
+  height: 2em;
+  background: unset;
+  padding-left: 1em;
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+.emailAddress{
+  border: 0.1px solid #303030;
+width: 100%;
+  border-radius: 2px;
+  height: 2em;
+  background: unset;
+  font-family: "Okta Regular";
+
+  padding-left: 1em;
+  font-size: 1em;
+  margin-top: 0.5em;
+
+
+}
+
+
+.formDiv{
+
+  padding-top: 1em;
+}
+
+.profileFullName{
+ padding-left: 2em;
+}
