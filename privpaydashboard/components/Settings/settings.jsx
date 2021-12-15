@@ -14,7 +14,7 @@ import PersonalInfo from "./personalInfo";
 import Security from "./security";
 import {useState} from "react";
 
-export default function SettingsComponent() {
+export default function SettingsComponent(props) {
 
     const [personalInfo, security] = useState()
 
