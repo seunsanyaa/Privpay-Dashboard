@@ -15,7 +15,7 @@ const Modal = ({ show, onClose, children, title }) => {
    const handleCloseClick = (e) => {
         e.preventDefault();
         onClose();
-    };
+    } ;
 
     const modalContent = show ? (
         <StyledModalOverlay>

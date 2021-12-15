@@ -7,7 +7,7 @@ import {logo,dashboardicon} from './icon'
 import {useState} from "react";
 import Modal from "./logoutmodal";
 
-export default function NavBar() {
+export default function NavBar( ) {
     const [showModal, setShowModal] = useState(false);
     return (
 
@@ -182,11 +182,11 @@ Yes
 
                                                   </Link>
 
-<Link href="/dashboard"><button className={navstyles.no} on>
+<button className={navstyles.no} onClick={() => setShowModal(false)}>
                                                       No
                                                   </button>
 
-</Link>
+
                                               </div>
                                           </div>
                                         </Modal>
