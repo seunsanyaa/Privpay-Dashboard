@@ -12,6 +12,7 @@
 .watchlistHeader{
 
   font-family: "Okta Regular";
+  color: black;
 }
 
 .containerElement{
@@ -37,7 +38,7 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
+color: black;
   font-size: 1em;
 }
 .containerElement{
@@ -56,8 +57,9 @@
 }
 .coinName{
   padding-left: 0.8em;
-  font-family: "Okta Thin";
+  font-family: "Okta Regular";
   font-size: 1.2em;
+  color: black;
 
 }
 
@@ -66,21 +68,23 @@
   margin: unset;
 }
 .coinPrice{
-  font-family: "Okta Thin";
+  font-family: "Okta Regular";
+  color: black;
   font-size: 1.2em;
   margin: unset;
 }
 
 .coinChange{
 
-  font-family: "Okta Thin";
+  font-family: "Okta Regular";
   font-size: 1.2em;
   color: #ED3237;
   margin: unset;
 }
 
 .coinChangeSecond{
-  font-family: "Okta Thin";
+  font-family: "Okta Regular";
+;
   font-size: 1.2em;
   color: #3CC13B;
   margin: unset;

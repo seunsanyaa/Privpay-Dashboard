@@ -50,7 +50,7 @@ export default function BuyAndSellWidget() {
 {/*<select  className={buyAndSell.coinName} value="Bitcoin">*/}
 {/*    <option className={buyAndSell.coinNameOption} value="Bitcoin">Bitcoin</option>*/}
 {/*</select>*/}
-                    <Box sx={{ minWidth: 120 }}>
+                    <Box sx={{ minWidth: 120 }} className={buyAndSell.coinName}>
                         <FormControl fullWidth>
                             <InputLabel id="demo-simple-select-label">Coin</InputLabel>
                             <Select
