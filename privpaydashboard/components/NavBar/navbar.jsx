@@ -4,7 +4,11 @@ import Link from 'next/link'
 import styles from '../../styles/Home.module.css'
 import navstyles from './navbar.module.scss'
 import {logo,dashboardicon} from './icon'
+import {useState} from "react";
+import Modal from "./logoutmodal";
+
 export default function NavBar() {
+    const [showModal, setShowModal] = useState(false);
     return (
 
         <div className={navstyles.nav}>
@@ -155,12 +159,38 @@ export default function NavBar() {
                             <img className={navstyles.icon}  src="data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.4' d='M9 7.2V16.79C9 20 11 22 14.2 22H16.79C19.99 22 21.99 20 21.99 16.8V7.2C22 4 20 2 16.8 2H14.2C11 2 9 4 9 7.2Z' fill='%23D4B418'/%3E%3Cpath d='M5.56994 8.12002L2.21994 11.47C1.92994 11.76 1.92994 12.24 2.21994 12.53L5.56994 15.88C5.85994 16.17 6.33994 16.17 6.62994 15.88C6.91994 15.59 6.91994 15.11 6.62994 14.82L4.55994 12.75H15.2499C15.6599 12.75 15.9999 12.41 15.9999 12C15.9999 11.59 15.6599 11.25 15.2499 11.25H4.55994L6.62994 9.18002C6.77994 9.03002 6.84994 8.84002 6.84994 8.65002C6.84994 8.46002 6.77994 8.26002 6.62994 8.12002C6.33994 7.82002 5.86994 7.82002 5.56994 8.12002Z' fill='%23292D32'/%3E%3C/svg%3E%0A" width={20} height={30}/>
 
 
-                                    <Link href="/logout" >
-
-                                        <a className={navstyles.menuLinkContent}> Log out</a>
 
 
-                                    </Link>
+
+                                        <button onClick={() => setShowModal(true)} className={navstyles.logout}>Logout</button>
+                                        <Modal
+                                            onClose={() => setShowModal(false)}
+                                            show={showModal}
+                                        >
+                                          <div className={navstyles.logoutModal}>
+
+                                              <img className={navstyles.icon}  src="data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.4' d='M9 7.2V16.79C9 20 11 22 14.2 22H16.79C19.99 22 21.99 20 21.99 16.8V7.2C22 4 20 2 16.8 2H14.2C11 2 9 4 9 7.2Z' fill='%23D4B418'/%3E%3Cpath d='M5.56994 8.12002L2.21994 11.47C1.92994 11.76 1.92994 12.24 2.21994 12.53L5.56994 15.88C5.85994 16.17 6.33994 16.17 6.62994 15.88C6.91994 15.59 6.91994 15.11 6.62994 14.82L4.55994 12.75H15.2499C15.6599 12.75 15.9999 12.41 15.9999 12C15.9999 11.59 15.6599 11.25 15.2499 11.25H4.55994L6.62994 9.18002C6.77994 9.03002 6.84994 8.84002 6.84994 8.65002C6.84994 8.46002 6.77994 8.26002 6.62994 8.12002C6.33994 7.82002 5.86994 7.82002 5.56994 8.12002Z' fill='%23292D32'/%3E%3C/svg%3E%0A" width={30} height={30}/>
+<h4 className={navstyles.logoutParagraph}>Are you sure you want to log out?</h4>
+
+                                              <div className={navstyles.yesOrno}>
+                                                  <Link href="/logout" >
+
+                                                      <button className={navstyles.yes}>
+Yes
+                                                      </button>
+
+
+                                                  </Link>
+
+<Link href="/dashboard"><button className={navstyles.no} on>
+                                                      No
+                                                  </button>
+
+</Link>
+                                              </div>
+                                          </div>
+                                        </Modal>
+
 
 
                                 </div>

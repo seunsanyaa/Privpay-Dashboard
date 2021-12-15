@@ -82,3 +82,56 @@ padding-top: 0.5em;
 color: grey;
 
 }
+
+.logout{
+  padding-left: 0.9em;
+  font-family: Okta;
+  background: none;
+  border: unset;
+  font-size: 0.9em;
+  color: #303030;
+  cursor: pointer;
+}
+.logoutModal{
+  text-align: center;
+  align-items: center;
+}
+.logoutParagraph{
+  font-family: "Okta Regular";
+  color: #303030;
+}
+
+.yesOrno{
+
+  text-align: center;
+}
+
+.yes{
+
+background: #D4B418;
+border: none;
+  text-decoration: unset;
+  color: #FFFFFF;
+  //padding-top: 0.5em;
+  //padding-bottom: 0.7em;
+  font-size: 1em;
+  font-family: "Okta Regular";
+  width: 5.5em;
+  height: 2em;
+  border-radius: 5px;
+}
+
+.no{
+
+  background: none;
+  border: 0.8px solid #D4B418;
+  text-decoration: unset;
+  margin-left :1.2em;
+  //padding-top: 0.5em;
+  //padding-bottom: 0.7em;
+  font-size: 1em;
+  font-family: "Okta Regular";
+  width: 5.5em;
+  height: 2em;
+  border-radius: 5px;
+}
