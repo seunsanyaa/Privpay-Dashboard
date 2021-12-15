@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.css'
 
 import NavBar from "../components/NavBar/navbar";
 import HomeRight from "../components/HomeRight/homeright";
+import React from "react";
+import { ChakraProvider } from '@chakra-ui/react'
 export default function Home() {
   return (
 <>

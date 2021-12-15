@@ -15,11 +15,13 @@ text-align: center;
 .buyAndSellHeader{
 
   font-family: "Okta";
+  color: black;
 }
 
 .buyAndSellHeaderLeft{
   border-top-left-radius: 6px;
   background: #FFFFFF;
+  color: black;
 }
 
 .buyAndSellHeaderRight{
@@ -43,11 +45,12 @@ text-align: center;
 
 .coinName{
 
-  width: 92%;
-  height: 3em;
+
+
   border: 0.611765px solid #C4C4C4;
   border-radius: 6.11765px;
-  font-size: 1.2em;
+  font-size: 1em;
+  color: black;
 
 }
 
@@ -67,8 +70,9 @@ text-align: center;
   border-radius: 6.11765px;
  margin-top: 1.5em;
   font-family: "Okta Regular";
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding-left: 1em;
+  color: black;
 }
 
 .buySubmit{
@@ -78,7 +82,7 @@ text-align: center;
   border-radius: 6.11765px;
   margin-top: 1.5em;
   font-family: "Okta Regular";
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding-left: 1em;
   background: #D4B418;
   color: white;

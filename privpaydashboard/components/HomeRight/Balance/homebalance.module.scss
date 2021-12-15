@@ -9,6 +9,7 @@
   background: #FFFFFF;
   margin-top: 1.8em;
   border-radius: 6px;
+  padding-left: 2em;
 }
 
 
@@ -38,9 +39,9 @@ padding-left: 2.2em;
 }
 .welcomeBack{
   margin: unset;
-  font-family: Okta;
+  font-family: Okta !important;
   font-size: 1.4em;
-
+color: black;
 }
 .name{
   font-family: 'Okta Thin';
@@ -50,25 +51,25 @@ color: #303030;
   margin: unset;
   padding-top: 1em;
   font-family: "Okta Regular";
-  color: #303030;
+  color: black;
 }
 
 .myBalance{
   margin: unset;
   padding-top: 1em;
   font-family: "Okta Regular";
-  color: #303030;
+  color: black;
   display: flex;
   align-items:center;
 }
 
 .usdBalance{
   font-family: Okta;
-
+  color: black;
 }
 .cryptoBalance{
   font-family: Okta;
-
+  color: black;
 }
 .eyeDiv{
 
