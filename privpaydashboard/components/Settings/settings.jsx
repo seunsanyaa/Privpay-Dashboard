@@ -87,10 +87,10 @@ export default function SettingsComponent(props) {
 
                                     </div>
 
-{/*<PersonalInfo/>*/}
+<PersonalInfo/>
 
-<Security hide={() => setShowSecurity(false)}
-          show={showSecurity} />
+{/*<Security hide={() => setShowSecurity(false)}*/}
+{/*          show={showSecurity} />*/}
 
 
                                     {/*<div className={settings.secondSection}>*/}
