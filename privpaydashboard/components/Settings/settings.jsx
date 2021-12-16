@@ -13,9 +13,10 @@ import settings from "./settings.module.scss"
 import PersonalInfo from "./personalInfo";
 import Security from "./security";
 import {useState} from "react";
+import Modal from "../NavBar/logoutmodal";
 
 export default function SettingsComponent(props) {
-
+    const [showSecurity, setShowSecurity] = useState(false);
     const [personalInfo, security] = useState()
 
     return (
@@ -79,14 +80,19 @@ export default function SettingsComponent(props) {
                                                 Personal Information
                                             </button>
                                         </Link>
-                                        <Link  href="" >
-                                            <button className={settings.security} onClick={props.Security}>
+
+                                            <button className={settings.security} onClick={() => setShowSecurity(true)}>
                                                 Security
                                             </button>
-                                        </Link>
+
                                     </div>
 
-<PersonalInfo/>
+{/*<PersonalInfo/>*/}
+
+<Security hide={() => setShowSecurity(false)}
+          show={showSecurity} />
+
+
                                     {/*<div className={settings.secondSection}>*/}
 
 

@@ -11,6 +11,7 @@
 .grid{
   padding-left: 4em;
   padding-right: 4em;
+  padding-bottom: 1em;
 }
 .breadcrum{
 
@@ -111,4 +112,35 @@ width: 100%;
 
 .profileFullName{
  padding-left: 2em;
+}
+
+
+.updatePasswordParagraph{
+color: #303030;
+  font-size: 0.8em;
+  font-family: "Okta Thin";
+}
+
+
+.buttonDiv{
+  //reduce margin for smaller screens
+  margin-left: 4em;
+position: relative;
+}
+.button{
+  position: absolute;
+  left:    0;
+  bottom:   30%;
+  font-family: "Okta Regular";
+font-size: 1em;
+  align-items: center;
+  background: none;
+  border: 0.817834px solid #D4B418;
+  border-radius: 4.90701px;
+text-align: center;
+  //padding: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  width: 12em;
+
 }
