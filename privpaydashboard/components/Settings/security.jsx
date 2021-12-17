@@ -26,9 +26,10 @@ export default function Security({show,hide}) {
 
 
             <div className={settings.buttonDiv}>
+                <Link href='/changepassword'>
                 <button className={settings.button} >
                     Change password</button>
-
+                </Link>
 
             </div>
 
@@ -48,10 +49,11 @@ export default function Security({show,hide}) {
 
 
         <div className={settings.buttonDiv}>
+            <Link href='/2FA'>
             <button className={settings.button} >
                 Set-up 2FA</button>
 
-
+            </Link>
         </div>
 
 

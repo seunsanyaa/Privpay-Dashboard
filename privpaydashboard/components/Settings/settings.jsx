@@ -8,6 +8,8 @@ import Head from "next/head";
 import Link from 'next/link'
 import homeBalance from "../HomeRight/Balance/homebalance.module.scss";
 import latestactivities from "../HomeRight/LatestActivities/latestactivities.module.scss";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 import settings from "./settings.module.scss"
 import PersonalInfo from "./personalInfo";
@@ -74,21 +76,23 @@ export default function SettingsComponent(props) {
                                 <div className={settings.grid}>
 
 
-                                    <div className={settings.breadcrum}>
-                                        <Link href="/settings">
-                                            <button className={settings.personalInfo} onClick={props.PersonalInfo} >
-                                                Personal Information
-                                            </button>
-                                        </Link>
 
-                                            <button className={settings.security} onClick={() => setShowSecurity(true)}>
-                                                Security
-                                            </button>
 
-                                    </div>
+                                    <Tabs>
+                                        <TabList>
+                                            <Tab selectedTabClassName="bg-black">      Personal Information
 
-<PersonalInfo/>
+                                            </Tab>
+                                            <Tab>      Security</Tab>
+                                        </TabList>
 
+                                        <TabPanel>
+                                            <PersonalInfo/>
+                                        </TabPanel>
+                                        <TabPanel>
+                                         <Security/>
+                                        </TabPanel>
+                                    </Tabs>
 {/*<Security hide={() => setShowSecurity(false)}*/}
 {/*          show={showSecurity} />*/}
 

@@ -35,11 +35,10 @@
     "postcss-prefixwrap": "^1.26.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-tabs": "^3.2.3",
     "sass": "^1.44.0",
-
     "scss": "^0.2.4",
     "styled-components": "^5.3.3"
-
   },
   "devDependencies": {
     "@mui/material": "^5.2.3",
