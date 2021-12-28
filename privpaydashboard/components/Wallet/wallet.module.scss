@@ -86,3 +86,54 @@ padding-top: 6em;
   padding-bottom: 8em;
 }
 
+@media (min-width: 1200px) {
+  .IconandText{
+  padding-left: 0}
+
+
+  .divider{
+    padding-top: 1em;
+    height: 8em;
+    padding-left: 2.5em;
+  }
+
+  .buttonDiv{
+    //reduce margin for smaller screens
+    margin-left: 6em;
+
+  }
+
+  .buttonsCointainer{
+
+margin-left: 1em;
+
+  }
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .IconandText{
+    padding-left: 0.5em}
+
+
+  .divider{
+    padding-top: 1em;
+    height: 8em;
+    padding-left: 2.5em;
+  }
+
+  .buttonDiv{
+    //reduce margin for smaller screens
+    margin-left:3em;
+
+  }
+
+  .buttonsCointainer{
+
+    margin-left: 0em;
+
+
+  }
+}
+

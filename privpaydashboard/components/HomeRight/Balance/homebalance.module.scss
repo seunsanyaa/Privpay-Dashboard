@@ -102,3 +102,49 @@ height: 8em;
   text-align: center;
   align-items: center;
 }
+
+@media (min-width: 1200px) and (max-width: 1399px){
+  .welcomeBack{
+    margin: unset;
+    font-family: Okta !important;
+    font-size: 1.05em;
+    color:black;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+
+
+
+  .container{
+    background: #FFFFFF;
+    margin-top: 1.8em;
+    border-radius: 6px;
+    padding-left: 0em;
+  }
+  .welcomeBack{
+    margin: unset;
+    font-family: Okta !important;
+    font-size: 1.05em;
+    color:black;
+  }
+
+  .divider{
+    padding-top: 1em;
+    height: 8em;
+    padding-left: 1em;
+  }
+
+  .IconandText{
+
+    display:flex;
+
+    align-items: start;
+    //justify-content: right;
+    padding-top: 1.5em;
+    padding-bottom: 2.5em;
+    //padding-top: 1em;
+    padding-left: 1em;
+  }
+}
