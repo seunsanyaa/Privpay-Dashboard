@@ -170,3 +170,26 @@ background: none;
   padding-left: 3em;
   padding-right: 5em;
 }
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .paySection{
+
+    padding-top: 1em;
+    padding-right: 26.5em;
+    padding-left: 26.5em;
+    border-top: 0.8px solid #C4C4C4;
+
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-bottom: 1em;
+  }
+
+
+  .padding{
+
+    padding-top: 2em;
+    padding-left: 0em;
+    padding-right: 1em;
+    padding-bottom: 2em;
+  }
+}
