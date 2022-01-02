@@ -11,52 +11,190 @@ import homeBalance from "../Balance/homebalance.module.scss";
 import dynamic from 'next/dynamic';
 const ApexCharts = dynamic(() => import('react-apexcharts'), { ssr: false });
 export default function WatchList() {
+//
+//     const [series, setSeries] = useState( [{
+//         name: 'series2',
+//         data: [11, 32, 45, 32, 34, 52, 41],
+//         color:'mediumspringgreen'
+//
+//     }]);
+//
+//     const [options, setOptions]= useState({
+//
+//
+//         fill: {
+//             colors: undefined,
+//             type: 'gradient',
+//             gradient: {
+//                 shadeIntensity: 1,
+//                 inverseColors: false,
+//                 opacityFrom: 0.5,
+//                 opacityTo: 0,
+//                 stops: [0, 90, 100]
+//             }
+//
+//         },
+//         chart: {
+//             foreColor:'white',
+//             height: 100,
+//             type: 'bar',
+//             background:'none',
+//             toolbar:{
+//                 show:false,
+//                 enabled:false
+//             }
+//         },
+//         dataLabels: {
+//             enabled: false
+//         },
+//         stroke: {
+//             curve: 'smooth'
+//
+//         },
+//         grid: {
+//             show: false
+//
+//         },
+//         yaxis:{
+//             show: false,
+//
+//             showAlways: false,
+//             lines:{
+//                 show:false
+//             },
+//
+//             tooltip:{
+//                 show:false,
+//                 showAlways:false,
+//                 enabled: false
+//             }
+//         },
+//         xaxis: {
+//
+//
+//             show: false,
+//             showAlways: false,
+//             lines:{
+//                 show:false
+//             },
+//
+//             tooltip:{
+//                 show:false,
+//                 showAlways:false,
+//                 enabled: false
+//             },
+//             dataLabels:{
+//                 show: false
+//             }
+// ,
+//             labels: {
+//                 axisBorder: {
+//                     show: false,
+//                     color: '#78909C',
+//                     height: 1,
+//                     width: '100%',
+//                     offsetX: 0,
+//                     offsetY: 0
+//                 },
+//                 axisTicks: {
+//                     show: false,
+//                     borderType: 'solid',
+//                     color: 'red',
+//                     height: 6,
+//                     offsetX: 0,
+//                     offsetY: 0
+//
+//                 }
+//             },
+//
+//             type: 'category',
+//             categories: [""]
+//
+//
+//         }
+//     })
+//
 
     const [series, setSeries] = useState( [{
-        name: 'series1',
-        data: [31, 4, 28, 5, 42, 109, 1]
+        name: 'TEAM A',
+        type: 'column',
+        data: []
+    }, {
+        name: 'TEAM B',
+        type: 'area',
+        data: []
+    }, {
+        name: 'TEAM C',
+        type: 'line',
+        data: [25, 0, 36, 11, 40, 35, 50, 10, 40, 20, 30],
+        color:'mediumspringgreen'
+
     }]);
 
-    const [options, setOptions]= useState({
-        colors: ['green', 'red'],
-        fill: {
-            colors: undefined,
+    const [options,setOptions] = useState({
+
+            dataLabels: {
+                enabled: false
+            },
+            legend: {
+                show: false
+            },
+            grid: {
+            show: false,  padding: {
+                    left: 0,
+                    right: 0
+                }
+
         },
         chart: {
-            foreColor:'white',
-            height: 100,
-            type: 'area',
-            background:'white',
-            toolbar:{
+height:'100%',
+
+            type: 'line',
+            stacked: false,
+
+                        toolbar:{
                 show:false,
                 enabled:false
             }
         },
-        dataLabels: {
-            enabled: false
-        },
         stroke: {
+            width: [0, 3, 2.5],
             curve: 'smooth'
         },
-        grid: {
-            show: false
-        },
-        yaxis:{
-            show: false,
-            showAlways: false,
-            lines:{
-                show:false
-            },
-
-            tooltip:{
-                show:false,
-                showAlways:false,
-                enabled: false
+        plotOptions: {
+            bar: {
+                columnWidth: '50%'
             }
         },
-        xaxis: {
 
+        fill: {
+            opacity: [0.85, 0.25, 1],
+            gradient: {
+                inverseColors: false,
+                shade: 'light',
+                type: "vertical",
+                opacityFrom: 0.85,
+                opacityTo: 0.55,
+                stops: [0, 100, 100, 100]
+            }
+        },
+        labels: {
+                show:false,
+            enabled:false
+        },
+        markers: {
+           show:false
+        },
+            xaxis: {
 
+                axisBorder: {
+                    show: false,
+                    color: '#78909C',
+                    height: 1,
+                    width: '100%',
+                    offsetX: 0,
+                    offsetY: 0
+                },
             show: false,
             showAlways: false,
             lines:{
@@ -69,7 +207,8 @@ export default function WatchList() {
                 enabled: false
             },
             dataLabels:{
-                show: false
+                show: false,
+                showAlways:false
             }
 ,
             labels: {
@@ -94,13 +233,31 @@ export default function WatchList() {
 
             type: 'category',
             categories: [""]
+},
+        yaxis: {
+            show:false,
+            title: {
+                text: 'Points',
+            },
+            min: 0
+        },
+        tooltip: {
+                show:false,
+            shared: true,
+            intersect: false,
+            y: {
+                formatter: function (y) {
+                    if (typeof y !== "undefined") {
+                        return y.toFixed(0) + " points";
+                    }
+                    return y;
 
-
+                }
+            }
         }
-    })
+    }
 
-
-
+    )
     // this.state = {
     //
     //     series: [{
@@ -231,8 +388,8 @@ export default function WatchList() {
 
                                 <div className={watchList.coinChart}>
 
-                                    <ApexCharts options={options} series={series} type="area" height={100} width={120} />
 
+                                    <ApexCharts options={options} series={series} type="line" height={90} width={110} />
 
                                 </div>
 
@@ -281,7 +438,7 @@ export default function WatchList() {
 
                     <div className={watchList.coinChart}>
 
-                        <ApexCharts options={options} series={series} type="area" height={100} width={120} />
+                        <ApexCharts options={options} series={series} type="line" height={90} width={110} />
 
 
                     </div>
@@ -327,7 +484,7 @@ export default function WatchList() {
 
 
                     <div className={watchList.coinChart}>
-                        <ApexCharts options={options} series={series} type="area" height={100} width={120} />
+                        <ApexCharts options={options} series={series} type="line" height={90} width={110} />
 
                         {/*<img width={110} src="data:image/svg+xml,%3Csvg width='149' height='34' viewBox='0 0 149 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 31.6436L2.41398 31.2693C3.41822 30.3612 4.88618 30.1857 6.07624 30.8313L7.93713 31.841C8.7628 32.2889 9.78129 32.1671 10.478 31.5371V31.5371C11.0535 31.0167 11.8593 30.8355 12.6021 31.0594L12.7993 31.1189C13.8432 31.4335 14.9723 31.0577 15.6193 30.18L16.5467 28.9222C16.6023 28.8468 16.6654 28.7771 16.7349 28.7142V28.7142C17.2689 28.2313 18.0818 28.2313 18.6159 28.7142L18.9845 29.0475C19.9174 29.8912 21.393 29.6451 22.0017 28.5443L22.6804 27.3168C23.4092 25.9988 24.9877 25.4059 26.404 25.9181L28.7269 26.7583C29.0211 26.8647 29.2981 27.0138 29.5489 27.2008L32.4347 29.3523C34.0336 30.5443 36.3219 29.9941 37.2041 28.2056L43.6556 15.1272C44.4409 13.535 46.3748 12.8899 47.9588 13.6917L52.0036 15.7391C52.1757 15.8262 52.3554 15.8975 52.5403 15.9522L58.7477 17.7868C59.6898 18.0652 60.7077 17.8942 61.5071 17.3232L63.9703 15.5638C65.0798 14.7712 66.5704 14.7712 67.68 15.5638L71.0532 17.9732C71.2898 18.1423 71.5023 18.3429 71.6846 18.5694L72.3769 19.4298C73.5653 20.9068 75.7718 21.0281 77.1151 19.6904L79.6866 17.1295C80.0154 16.802 80.4117 16.5502 80.8479 16.3916L87.2097 14.0782C88.2922 13.6846 89.5027 13.9047 90.3772 14.6543L93.6501 17.4597C94.2285 17.9555 94.9652 18.228 95.727 18.228H97.7725C98.7573 18.228 99.687 17.7733 100.292 16.9959L103.15 13.321C104.154 12.0295 105.973 11.7069 107.36 12.574L108.51 13.2929C110.037 14.2473 112.051 13.7501 112.958 12.1947L115.331 8.12657C116.198 6.64094 118.086 6.10933 119.601 6.92452L121.72 8.06557C123.078 8.79657 124.765 8.45176 125.727 7.2464L128.738 3.47406C129.722 2.24204 131.457 1.91267 132.824 2.69878L136.702 4.92989C137.303 5.27581 138.001 5.41639 138.689 5.33035L142.918 4.80177C143.626 4.71324 144.344 4.86469 144.956 5.2319L148 7.05858' stroke='%23ED3237' stroke-width='3.19126'/%3E%3C/svg%3E%0A" />*/}
 
