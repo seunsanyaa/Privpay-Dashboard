@@ -4,7 +4,7 @@ import Link from 'next/link'
 import navstyles from "../../NavBar/navbar.module.scss";
 import homeRight from "../homeright.module.scss";
 import React, { useState } from "react";
-import axios from 'axios'
+
 import watchList from "./watchlist.module.scss"
 import homeBalance from "../Balance/homebalance.module.scss";
 // import { VictoryLine } from 'victory';
@@ -224,20 +224,6 @@ height:'100%',
     );
 
 
-    const fetchBtcData = async () => {
-
-        let price
-        let change
-        let data =[]
-
-
-        await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true')
-            .then(Response =>{
-
-                console.log("Response",Response.data)
-            })
-
-    }
 
 
 
