@@ -4,117 +4,80 @@ import Link from 'next/link'
 import navstyles from "../../NavBar/navbar.module.scss";
 import homeRight from "../homeright.module.scss";
 import React, { useState } from "react";
+import axios from 'axios'
 import watchList from "./watchlist.module.scss"
 import homeBalance from "../Balance/homebalance.module.scss";
 // import { VictoryLine } from 'victory';
 // import Chart from "react-apexcharts";
 import dynamic from 'next/dynamic';
 const ApexCharts = dynamic(() => import('react-apexcharts'), { ssr: false });
-export default function WatchList() {
-//
-//     const [series, setSeries] = useState( [{
-//         name: 'series2',
-//         data: [11, 32, 45, 32, 34, 52, 41],
-//         color:'mediumspringgreen'
-//
-//     }]);
-//
-//     const [options, setOptions]= useState({
-//
-//
-//         fill: {
-//             colors: undefined,
-//             type: 'gradient',
-//             gradient: {
-//                 shadeIntensity: 1,
-//                 inverseColors: false,
-//                 opacityFrom: 0.5,
-//                 opacityTo: 0,
-//                 stops: [0, 90, 100]
-//             }
-//
-//         },
-//         chart: {
-//             foreColor:'white',
-//             height: 100,
-//             type: 'bar',
-//             background:'none',
-//             toolbar:{
-//                 show:false,
-//                 enabled:false
-//             }
-//         },
-//         dataLabels: {
-//             enabled: false
-//         },
-//         stroke: {
-//             curve: 'smooth'
-//
-//         },
-//         grid: {
-//             show: false
-//
-//         },
-//         yaxis:{
-//             show: false,
-//
-//             showAlways: false,
-//             lines:{
-//                 show:false
-//             },
-//
-//             tooltip:{
-//                 show:false,
-//                 showAlways:false,
-//                 enabled: false
-//             }
-//         },
-//         xaxis: {
-//
-//
-//             show: false,
-//             showAlways: false,
-//             lines:{
-//                 show:false
-//             },
-//
-//             tooltip:{
-//                 show:false,
-//                 showAlways:false,
-//                 enabled: false
-//             },
-//             dataLabels:{
-//                 show: false
-//             }
-// ,
-//             labels: {
-//                 axisBorder: {
-//                     show: false,
-//                     color: '#78909C',
-//                     height: 1,
-//                     width: '100%',
-//                     offsetX: 0,
-//                     offsetY: 0
-//                 },
-//                 axisTicks: {
-//                     show: false,
-//                     borderType: 'solid',
-//                     color: 'red',
-//                     height: 6,
-//                     offsetX: 0,
-//                     offsetY: 0
-//
-//                 }
-//             },
-//
-//             type: 'category',
-//             categories: [""]
-//
-//
-//         }
-//     })
-//
+export default function WatchList(props) {
+    const bitcoinprice =props.data.bitcoinprice
+    const ethereumprice = props.data.ethereumprice
+    const tetherprice = props.data.tetherprice
 
+    const bitcoinchange = props.data.bitcoinchange
+    const ethereumchange = props.data.ethereumchange
+    const tetherchange= props.data.tetherchange
+
+
+  const  Btcpon=()=> {
+
+        if (Math.sign(bitcoinchange)=== -1) {
+            return     <h4 className={watchList.coinChange} style={{color: "red"}}>
+                {bitcoinchange}
+            </h4>;
+        }
+
+        else {
+            return     <h4 className={watchList.coinChange} style={{color: "green"}}>
+                + {bitcoinchange}
+            </h4>;
+        }
+    }
+
+
+
+    const  Ethpon=()=> {
+
+        if (Math.sign(ethereumchange)=== -1) {
+            return     <h4 className={watchList.coinChange} style={{color: "red"}}>
+                {ethereumchange}
+            </h4>;
+        }
+
+        else {
+            return     <h4 className={watchList.coinChange} style={{color: "green"}}>
+               + {ethereumchange}
+            </h4>;
+        }
+    }
+
+
+    const  Usdtpon=()=> {
+
+        if (Math.sign(tetherchange)=== -1) {
+            return     <h4 className={watchList.coinChange} style={{color: "red"}}>
+                {tetherchange}
+            </h4>;
+        }
+
+        else {
+            return     <h4 className={watchList.coinChange} style={{color: "green"}}>
+                +{tetherchange}
+            </h4>;
+        }
+    }
+
+
+
+
+
+    // if (bitcoinchange.Math.sign()=== -1) {
+    //     return     <h4 className={watchList.coinChange} style={{color: "red"}}>
+    //         {bitcoinchange}
+    //     </h4>;
+    // }
     const [series, setSeries] = useState( [{
         name: 'TEAM A',
         type: 'column',
@@ -124,9 +87,10 @@ export default function WatchList() {
         type: 'area',
         data: []
     }, {
-        name: 'TEAM C',
-        type: 'line',
-        data: [25, 0, 36, 11, 40, 35, 50, 10, 40, 20, 30],
+            name: 'chart',
+            type: 'line',
+            data: [25, 0, 36, 11, 40, 35, 50, 10, 40, 20, 30],
+
         color:'mediumspringgreen'
 
     }]);
@@ -257,40 +221,24 @@ height:'100%',
         }
     }
 
-    )
-    // this.state = {
-    //
-    //     series: [{
-    //         name: 'series1',
-    //         data: [31, 40, 28, 51, 42, 109, 100]
-    //     }, {
-    //         name: 'series2',
-    //         data: [11, 32, 45, 32, 34, 52, 41]
-    //     }],
-    //     options: {
-    //         chart: {
-    //             height: 350,
-    //             type: 'area'
-    //         },
-    //         dataLabels: {
-    //             enabled: false
-    //         },
-    //         stroke: {
-    //             curve: 'smooth'
-    //         },
-    //         xaxis: {
-    //             type: 'datetime',
-    //             categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-    //         },
-    //         tooltip: {
-    //             x: {
-    //                 format: 'dd/MM/yy HH:mm'
-    //             },
-    //         },
-    //     },
-    //
-    //
-    // };
+    );
+
+
+    const fetchBtcData = async () => {
+
+        let price
+        let change
+        let data =[]
+
+
+        await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true')
+            .then(Response =>{
+
+                console.log("Response",Response.data)
+            })
+
+    }
+
 
 
 
@@ -396,15 +344,17 @@ height:'100%',
 
                                 <div className={watchList.coinPriceDiv}>
                                     <h4 className={watchList.coinPrice}>
-                                        $50,900
+                                        $ {bitcoinprice}
                                     </h4>
                                 </div>
 
 
                                 <div className={watchList.coinChangeDiv}>
-                                    <h4 className={watchList.coinChange}>
-                                        -3.73%
-                                    </h4>
+
+                                  <Btcpon/>
+                                    {/*<h4 className={watchList.coinChange}>*/}
+                                    {/*     {bitcoinchange}*/}
+                                    {/*</h4>*/}
                                 </div>
 
                                 </div>
@@ -446,15 +396,13 @@ height:'100%',
 
                     <div className={watchList.coinPriceDiv}>
                         <h4 className={watchList.coinPrice}>
-                            $2,400
+                            $ {ethereumprice}
                         </h4>
                     </div>
 
 
                     <div className={watchList.coinChangeDiv}>
-                        <h4 className={watchList.coinChangeSecond}>
-                            +4.73%
-                        </h4>
+                      <Ethpon/>
                     </div>
 
                 </div>
@@ -529,15 +477,15 @@ height:'100%',
 
                     <div className={watchList.coinPriceDiv}>
                         <h4 className={watchList.coinPrice}>
-                            $1
+                           $ {tetherprice}
                         </h4>
                     </div>
 
 
                     <div className={watchList.coinChangeDiv}>
-                        <h4 className={watchList.coinChange}>
-                            -0.09%
-                        </h4>
+
+                            <Usdtpon/>
+
                     </div>
 
                 </div>
@@ -550,4 +498,10 @@ height:'100%',
 
         </div>
     )
+
+
+
 }
+
+
+

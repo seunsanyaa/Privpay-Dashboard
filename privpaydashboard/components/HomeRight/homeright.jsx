@@ -12,7 +12,17 @@ import BuyAndSellWidget from "./BuyAndSellWidget/buyandsellwidget";
 import LatestActivities from "./LatestActivities/latestactivities";
 import TopBar from "../TopBar/topbar";
 
-export default function HomeRight() {
+export default function HomeRight(props) {
+    const bitcoinprice = props.data.bitcoinprice;
+    const ethereumprice = props.data.ethereumprice
+    const tetherprice = props.data.tetherprice
+
+
+    const bitcoinchange = props.data.bitcoinchange
+    const ethereumchange = props.data.ethereumchange
+    const tetherchange= props.data.tetherchange
+
+    const priceData ={bitcoinprice,ethereumprice,tetherprice,bitcoinchange,ethereumchange,tetherchange}
     return (
 
         <div className={homeRight.page}>
@@ -61,7 +71,7 @@ export default function HomeRight() {
 <HomeBalance/>
 
 
-<WatchList/>
+<WatchList data={priceData}/>
 
 
 <div className={homeRight.lastGrid}>
