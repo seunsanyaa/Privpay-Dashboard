@@ -6,9 +6,14 @@ import { useRouter } from 'next/router';
 
 import NavBar from "../components/NavBar/navbar";
 import HomeRight from "../components/HomeRight/homeright";
-import React from "react";
+import React, {useEffect} from "react";
 export default function Home(props) {
-
+    useEffect(() => {
+        const interval = setInterval(() => {
+            console.log('This will run every second!');
+        }, 1000);
+        return () => clearInterval(interval);
+    });
 
     // const router = useRouter();
     // // Call this function whenever you want to
