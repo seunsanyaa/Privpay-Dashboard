@@ -12,13 +12,22 @@ import homeBalance from "../Balance/homebalance.module.scss";
 import dynamic from 'next/dynamic';
 const ApexCharts = dynamic(() => import('react-apexcharts'), { ssr: false });
 export default function WatchList(props) {
-    const bitcoinprice =props.data.bitcoinprice
-    const ethereumprice = props.data.ethereumprice
-    const tetherprice = props.data.tetherprice
+    // const price = props.data
 
-    const bitcoinchange = props.data.bitcoinchange
-    const ethereumchange = props.data.ethereumchange
-    const tetherchange= props.data.tetherchange
+    const bitcoinPrice= props.data.bitcoinPrice
+    const ethereumPrice = props.data.ethereumPrice
+    const tetherPrice = props.data.tetherPrice
+    // const ethereumprice = props.data.ethereumprice
+    // const tetherprice = props.data.tetherprice
+    //
+
+
+    const bitcoinchange = props.data.bitcoinChange
+
+    const ethereumchange = props.data.ethereumChange
+
+
+    const tetherchange= props.data.tetherChange
 
 
   const  Btcpon=()=> {
@@ -330,7 +339,9 @@ height:'100%',
 
                                 <div className={watchList.coinPriceDiv}>
                                     <h4 className={watchList.coinPrice}>
-                                        $ {bitcoinprice}
+                                        {/*$ {bitcoinprice}*/}
+
+                                       $ {bitcoinPrice}
                                     </h4>
                                 </div>
 
@@ -382,7 +393,7 @@ height:'100%',
 
                     <div className={watchList.coinPriceDiv}>
                         <h4 className={watchList.coinPrice}>
-                            $ {ethereumprice}
+                            $ {ethereumPrice}
                         </h4>
                     </div>
 
@@ -463,7 +474,7 @@ height:'100%',
 
                     <div className={watchList.coinPriceDiv}>
                         <h4 className={watchList.coinPrice}>
-                           $ {tetherprice}
+                           $ {tetherPrice}
                         </h4>
                     </div>
 
