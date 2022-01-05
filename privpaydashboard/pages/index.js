@@ -62,7 +62,7 @@ export default function Home() {
 
             fetchPrice();
 
-        },10000)
+        },2000)
 
 
 
