@@ -13,21 +13,9 @@ import LatestActivities from "./LatestActivities/latestactivities";
 import TopBar from "../TopBar/topbar";
 
 export default function HomeRight(props) {
-    // const bitcoinprice = props.data.bitcoinprice;
 
-
-    //
-    //
-    // const bitcoinPrice= props.data.bitcoinPrice
-    // const ethereumPrice = props.data.ethereumPrice
-    // const tetherPrice = props.data.tetherPrice
     const  coinData = props.data
-    // const bitcoinchange = props.data.bitcoinchange
-    // const ethereumchange = props.data.ethereumchange
-    // const tetherchange= props.data.tetherchange
-    //
-    // const priceData ={bitcoinprice,ethereumprice,tetherprice,bitcoinchange,ethereumchange,tetherchange}
-    return (
+  return (
 
         <div className={homeRight.page}>
 
