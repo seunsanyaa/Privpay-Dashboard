@@ -22,38 +22,19 @@ export default function WatchList(props) {
     const tetherchange= props.data.tetherChange
 
 
-    let tetherChart = ()=> {
-        if (Math.sign(tetherchange) === -1 || Math.sign(tetherchange) === 0) {
-            return  {chartColor: '#FF0000'}
-        } else {
-            return {chartColor: '#3c9f52'}
 
-        }
 
-    }
-    tetherChart()
-    let ethereumChart = ()=> {
-        if (Math.sign(ethereumchange) === -1 || Math.sign(ethereumchange) === 0) {
-            return {chartColor: '#FF0000'}
-        } else {
-            return  {chartColor: '#3c9f52'}
-
-        }
-
-    }
-
-    ethereumChart()
   const  Btcpon=()=> {
 
         if (Math.sign(bitcoinchange)=== -1 || Math.sign(bitcoinchange)===0) {
             return     <h4 className={watchList.coinChange} style={{color: "red"}}>
-                {bitcoinchange}
+                {bitcoinchange} %
             </h4>;
         }
 
         else {
             return     <h4 className={watchList.coinChange} style={{color: "green"}}>
-                + {bitcoinchange}
+                + {bitcoinchange} %
             </h4>;
         }
     }
@@ -64,13 +45,13 @@ export default function WatchList(props) {
 
         if (Math.sign(ethereumchange)=== -1 || Math.sign(ethereumchange)===0) {
             return     <h4 className={watchList.coinChange} style={{color: "red"}}>
-                {ethereumchange}
+                {ethereumchange} %
             </h4>;
         }
 
         else {
             return     <h4 className={watchList.coinChange} style={{color: "green"}}>
-               + {ethereumchange}
+               + {ethereumchange} %
             </h4>;
         }
     }
@@ -83,19 +64,18 @@ export default function WatchList(props) {
 
         if (Math.sign(tetherchange)=== -1 || Math.sign(tetherchange)=== 0) {
             return     <h4 className={watchList.coinChange} style={{color: "red"}}>
-                {tetherchange}
+                {tetherchange} %
             </h4>;
         }
 
         else {
             return     <h4 className={watchList.coinChange} style={{color: "green"}}>
-                +{tetherchange}
+                +{tetherchange} %
             </h4>;
         }
     }
 
 //
-// console.log( ethereumChart().chartColor)
 
     const [btcseries, setBtcSeries] =
         useState(
@@ -122,7 +102,7 @@ export default function WatchList(props) {
             let bitcoinChart = () => {
 
                 let btccolor
-                if (Math.sign(bitcoinchange) === -1) {
+                if (Math.sign(bitcoinchange) === -1 || Math.sign(bitcoinchange) === 0) {
                     btccolor =  {chartColor: '#FF0000'}
 
                 } else {
@@ -158,7 +138,6 @@ export default function WatchList(props) {
             bitcoinChart()
         },5000)
     })
-    console.log(btcseries[2].color)
 
     const [ethseries, setEthSeries] = useState( [{
         name: 'TEAM A',
@@ -173,7 +152,7 @@ export default function WatchList(props) {
             type: 'line',
             data: [5, 10, 36, 6, 30, 35, 40, 10, 60, 20, 10],
 
-        color: ''+ ethereumChart().chartColor
+           color: '#3c9f52'
 
     }]
 
@@ -185,7 +164,7 @@ export default function WatchList(props) {
             let ethereumChart = () => {
 
                 let ethcolor
-                if (Math.sign(ethereumchange) === -1) {
+                if (Math.sign(ethereumchange) === -1 ||  Math.sign(ethereumchange) === 0) {
                     ethcolor =  {chartColor: '#FF0000'}
 
                 } else {
@@ -235,7 +214,7 @@ export default function WatchList(props) {
             type: 'line',
             data: [35, 50, 10, 40, 20, 30,25, 0, 36, 11, 40 ],
 
-        color: ''+ tetherChart().chartColor
+        color: '#3c9f52'
 
     }]
     );
@@ -247,7 +226,7 @@ export default function WatchList(props) {
             let tetherChart = () => {
 
                 let usdtcolor
-                if (Math.sign(tetherchange) === -1) {
+                if (Math.sign(tetherchange) === -1 || Math.sign(tetherchange) === 0 ) {
                     usdtcolor =  {chartColor: '#FF0000'}
 
                 } else {
